@@ -12,13 +12,16 @@ export default function Navbar() {
     script.async = true;
     document.body.appendChild(script);
   }, []);
-
+  // https://admin-backend-xolz.onrender.com
   const handlePayment = async () => {
-    const res = await fetch("http://localhost:3002/create-order", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount: 499 }), // ₹499
-    });
+    const res = await fetch(
+      "https://admin-backend-xolz.onrender.com/create-order",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount: 499 }), // ₹499
+      }
+    );
 
     const data = await res.json();
     interface RazorpayResponse {
