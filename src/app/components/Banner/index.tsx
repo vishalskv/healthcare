@@ -26,7 +26,7 @@ const slides = [
 export default function Banner() {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
-    duration: 1000,
+
     slideChanged(s) {
       setCurrentSlide(s.track.details.rel);
     },
